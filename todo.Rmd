@@ -1,0 +1,46 @@
+---
+title: "CHAMPS book sprint"
+output:
+  html_document:
+    theme: united
+    toc: yes
+  md_document:
+    toc: yes
+    variant: markdown_github
+  pdf_document:
+    highlight: zenburn
+    toc: yes
+---
+# Preliminary planning
+
+
+## Content
+
+### Dynamical systems concepts
+
+__Coordinates__
+
+__Degrees of freedom__
+
+__Reaction__
+
+__Reaction coordinates__
+
+__Total energy, Hamiltonians__
+
+__Phase space structures: Dimensionality, DS and reaction coordinates, saddles, periodic orbits, NHIMs, Invariant manifolds__
+
+__Chemical reaction dynamics: Flux across DS, Bifurcations in chemical models, LDs__
+
+### Problems
+
+__1 DoF__
+
+_Saddle_
+
+_Morse oscillator_
+
+
+## Implementation
+
+
