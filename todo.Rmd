@@ -40,6 +40,18 @@ _Saddle_
 
 _Morse oscillator_
 
+_Saddle-node and pitchfork_
+
+__2 DoF__
+
+_Index-1 saddle_
+
+_Index-2 saddle_
+
+
+
+
+
 
 ## Implementation
 
