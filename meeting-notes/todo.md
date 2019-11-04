@@ -10,6 +10,16 @@ Preliminary planning
 Content
 -------
 
+See ![slides](https://uob-my.sharepoint.com/:p:/g/personal/ba13026_bristol_ac_uk/ETG_bPMtVuFMl7eluLLOuycB252nnnWuQsTDTHMFOBdSrQ?e=4%3afp08yE&at=9) for updated content and assignments. Needs access via University of Bristol email.
+
+Condense the paper materials to form an illustration of the ideas.
+
+For each problem, we will follow the structure:
+
+-   Introduction and development of the problem
+-   Revealing the phase space structure
+-   Implications for reaction dynamics
+
 ### Dynamical systems concepts
 
 **Coordinates**
@@ -45,6 +55,20 @@ Content
 *Double-Morse*
 
 *Chesnavich model: roaming and thermostat*
+
+*Caldera: dynamical matching*
+
+*4 well potential*
+
+*System-bath model*
+
+*Barbanis, De Leon-Berne, Saddle-node with bath*
+
+**N-DoF**
+
+*3 DoF quadratic normal form*
+
+*2 DoF system coupled with bath modes*
 
 Implementation
 --------------
