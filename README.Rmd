@@ -1,0 +1,15 @@
+---
+title: "CHAMPS book sprint: Collection of meeting notes, templates, and tests"
+output:
+  pdf_document:
+    highlight: zenburn
+    toc: yes
+  md_document:
+    toc: yes
+    variant: markdown_github
+  html_document:
+    theme: united
+    toc: yes
+---
+
+
