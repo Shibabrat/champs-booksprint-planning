@@ -259,9 +259,9 @@ optics.
 
 <mark> <b>The bib file /Users/bas/research/book_sprint/champs-booksprint-planning/convert_tex2html/article_test/sample.bib was not found
 
-</b> </mark>[<a id="cit-FORSTER2007" href="#call-FORSTER2007">1</a>] !! _This reference was not found in /Users/bas/research/book_sprint/champs-booksprint-planning/convert_tex2html/article_test/sample.bib _ !!
+</b> </mark>(<a id="cit-FORSTER2007" href="#call-FORSTER2007">?</a>) !! _This reference was not found in /Users/bas/research/book_sprint/champs-booksprint-planning/convert_tex2html/article_test/sample.bib _ !!
 
-[<a id="cit-Chitimalla:17" href="#call-Chitimalla:17">2</a>] !! _This reference was not found in /Users/bas/research/book_sprint/champs-booksprint-planning/convert_tex2html/article_test/sample.bib _ !!
+(<a id="cit-Chitimalla:17" href="#call-Chitimalla:17">?</a>) !! _This reference was not found in /Users/bas/research/book_sprint/champs-booksprint-planning/convert_tex2html/article_test/sample.bib _ !!
 
 
 
