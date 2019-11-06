@@ -255,11 +255,16 @@ University of Maryland. Her research interests also include lasers and
 optics.
 
 
-<p><span class="citation">(Author 2000)</span></p>
-<div class="references">
-<p>Author. 2000. <em>Title</em>. Publisher.</p>
-</div>
+# References
+
+<mark> <b>The bib file /Users/bas/research/book_sprint/champs-booksprint-planning/convert_tex2html/article_test/sample.bib was not found
+
+</b> </mark>[<a id="cit-FORSTER2007" href="#call-FORSTER2007">1</a>] !! _This reference was not found in /Users/bas/research/book_sprint/champs-booksprint-planning/convert_tex2html/article_test/sample.bib _ !!
+
+[<a id="cit-Chitimalla:17" href="#call-Chitimalla:17">2</a>] !! _This reference was not found in /Users/bas/research/book_sprint/champs-booksprint-planning/convert_tex2html/article_test/sample.bib _ !!
+
+
 
 ```python
-
+pwd
 ```
