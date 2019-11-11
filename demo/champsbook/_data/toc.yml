@@ -31,15 +31,15 @@
 
 ##################################################
 - title: Makrina 
-  url: /MA/booksprinttest_makrina.ipynb
+  url: /MA/booksprinttest_makrina
   not_numbered: true
   
 - title: Naik
-  url: /SN/workflow-demo/paper.md
+  url: /SN/workflow-demo/paper
   not_numbered: true
    
 - title: Rafa
-  url: /RGM/Draft.md
+  url: /RGM/Draft
   not_numbered: true
 ##################################################
 
