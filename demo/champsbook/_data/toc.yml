@@ -18,7 +18,7 @@
 
 
 - url: /01/ham_bif
-  title: Steve chapter
+  title: Dynamical Systems Concepts
     
 - url: /02/booksprinttest_makrina
   title: Makrina chapter
@@ -28,6 +28,9 @@
     
 - url: /04/test
   title: Vladi chapter
+    
+- url: /contributing
+  not_numbered: true
     
 - url: https://github.com/broncio123/champs-booksprint-planning
   title: GitHub repository

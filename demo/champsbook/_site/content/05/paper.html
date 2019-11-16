@@ -8,14 +8,14 @@
   <title>UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems</title>
   <meta name="description" content="## Statement of NeedIn Hamiltonian systems the fundamental phase space structure that partitions dynamically disparate trajectories and mediates transition b...">
 
-  <link rel="canonical" href="http://localhost:4444/content/05/paper.html">
-  <link rel="alternate" type="application/rss+xml" title="Jupyter Book" href="http://localhost:4444/feed.xml">
+  <link rel="canonical" href="http://localhost:4446/content/05/paper.html">
+  <link rel="alternate" type="application/rss+xml" title="CHAMPS Dynamical Systems Book" href="http://localhost:4446/feed.xml">
 
-  <meta property="og:url"         content="http://localhost:4444/content/05/paper.html" />
+  <meta property="og:url"         content="http://localhost:4446/content/05/paper.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems" />
 <meta property="og:description" content="## Statement of NeedIn Hamiltonian systems the fundamental phase space structure that partitions dynamically disparate trajectories and mediates transition b..." />
-<meta property="og:image"       content="http://localhost:4444/images/logo/logo.png" />
+<meta property="og:image"       content="http://localhost:4446/images/logo/champs_logo.jpg" />
 
 <meta name="twitter:card" content="summary">
 
@@ -24,28 +24,28 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "http://localhost:4444/content/05/paper.html",
+  "mainEntityOfPage": "http://localhost:4446/content/05/paper.html",
   "headline": "UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems",
-  "datePublished": "2019-11-16T18:43:33+00:00",
-  "dateModified": "2019-11-16T18:43:33+00:00",
+  "datePublished": "2019-11-16T20:22:17+00:00",
+  "dateModified": "2019-11-16T20:22:17+00:00",
   "description": "## Statement of NeedIn Hamiltonian systems the fundamental phase space structure that partitions dynamically disparate trajectories and mediates transition b...",
   "author": {
     "@type": "Person",
-    "name": "The Jupyter Book Community"
+    "name": "The CHAMPS group"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Data 100 at UC Berkeley",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:4444",
+      "url": "http://localhost:4446",
       "width": 60,
       "height": 60
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "http://localhost:4444",
+    "url": "http://localhost:4446",
     "height": 60,
     "width": 60
   }
@@ -82,6 +82,13 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}},
         linebreaks: { automatic: true },
     },
+    
+    // Number LaTeX-style equations
+    "TeX": {
+        equationNumbers: {
+          autoNumber: "all"
+        }
+    }
     
 });
 </script>
@@ -343,7 +350,7 @@ function addParamToInternalLinks(hub) {
   var links = document.querySelectorAll("a").forEach(function(link) {
     var href = link.href;
     // If the link is an internal link...
-    if (href.search("http://localhost:4444") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+    if (href.search("http://localhost:4446") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
       // Assume we're an internal link, add the hub param to it
       var params = getJsonFromUrl(href);
       if (params !== false) {
@@ -563,8 +570,8 @@ initFunction(initPrint)
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href=""><img src="/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
-  <h2 class="c-sidebar__title">Jupyter Book</h2>
+  <a href="https://champsproject.com"><img src="/images/logo/champs_logo.jpg" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">CHAMPS Dynamical Systems Book</h2>
   <ul class="c-sidebar__chapters">
     
       
@@ -584,7 +591,7 @@ initFunction(initPrint)
           
             1.
           
-          Steve chapter
+          Dynamical Systems Concepts
         </a>
       </li>
 
@@ -684,6 +691,37 @@ initFunction(initPrint)
             4.
           
           Vladi chapter
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/contributing">
+        <a class="c-sidebar__entry"
+          href="/contributing.html"
+        >
+          
+          Contributing to Jupyter Book
         </a>
       </li>
 
