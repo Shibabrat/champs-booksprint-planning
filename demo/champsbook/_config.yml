@@ -156,5 +156,13 @@ plugins:
   - jekyll-redirect-from
   - jekyll-scholar
 
+# NOTE: Line below not native to Jupyter-book demo files
+# The line below controls the style of the citation printer inline
+# This will enable numbers in square brackets to be printed
+scholar:
+  source: ./_bibliography
+  style: _styles/modified-ieee.csl
+  order: ascending
+
 # Jupyter Book version - DO NOT CHANGE THIS. It is generated when a new book is created
 jupyter_book_version: "0.6.4dev0"
