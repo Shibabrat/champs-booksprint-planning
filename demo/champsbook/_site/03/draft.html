@@ -5,17 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Chapter</title>
+  <title>Rafa Chapter</title>
   <meta name="description" content="        Rafa chapter    Introduction (This will be the introduction)Equations for the system Our model potential (see @fig:ModelFig) consists of a one-dimens...">
 
-  <link rel="canonical" href="http://localhost:4445/03/Draft.html">
-  <link rel="alternate" type="application/rss+xml" title="CHAMPS Dynamical Systems Book" href="http://localhost:4445/feed.xml">
+  <link rel="canonical" href="http://localhost:4444/03/Draft.html">
+  <link rel="alternate" type="application/rss+xml" title="CHAMPS Dynamical Systems Book" href="http://localhost:4444/feed.xml">
 
-  <meta property="og:url"         content="http://localhost:4445/03/Draft.html" />
+  <meta property="og:url"         content="http://localhost:4444/03/Draft.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Chapter" />
+<meta property="og:title"       content="Rafa Chapter" />
 <meta property="og:description" content="        Rafa chapter    Introduction (This will be the introduction)Equations for the system Our model potential (see @fig:ModelFig) consists of a one-dimens..." />
-<meta property="og:image"       content="http://localhost:4445/images/logo/champs_logo.jpg" />
+<meta property="og:image"       content="http://localhost:4444/images/logo/champs_logo.jpg" />
 
 <meta name="twitter:card" content="summary">
 
@@ -24,10 +24,10 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "http://localhost:4445/03/Draft.html",
-  "headline": "Chapter",
-  "datePublished": "2019-11-18T20:22:02+00:00",
-  "dateModified": "2019-11-18T20:22:02+00:00",
+  "mainEntityOfPage": "http://localhost:4444/03/Draft.html",
+  "headline": "Rafa Chapter",
+  "datePublished": "2019-11-20T14:23:10+00:00",
+  "dateModified": "2019-11-20T14:23:10+00:00",
   "description": "        Rafa chapter    Introduction (This will be the introduction)Equations for the system Our model potential (see @fig:ModelFig) consists of a one-dimens...",
   "author": {
     "@type": "Person",
@@ -38,14 +38,14 @@
     "name": "Data 100 at UC Berkeley",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:4445",
+      "url": "http://localhost:4444",
       "width": 60,
       "height": 60
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "http://localhost:4445",
+    "url": "http://localhost:4444",
     "height": 60,
     "width": 60
   }
@@ -350,7 +350,7 @@ function addParamToInternalLinks(hub) {
   var links = document.querySelectorAll("a").forEach(function(link) {
     var href = link.href;
     // If the link is an internal link...
-    if (href.search("http://localhost:4445") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+    if (href.search("http://localhost:4444") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
       // Assume we're an internal link, add the hub param to it
       var params = getJsonFromUrl(href);
       if (params !== false) {
@@ -657,7 +657,7 @@ initFunction(initPrint)
           
             3.
           
-          Chapter
+          Rafa Chapter
         </a>
       </li>
 
@@ -691,6 +691,39 @@ initFunction(initPrint)
             4.
           
           Vladi chapter
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/05/paper">
+        <a class="c-sidebar__entry"
+          href="/05/paper.html"
+        >
+          
+            5.
+          
+          UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems
         </a>
       </li>
 
@@ -819,7 +852,7 @@ initFunction(initPrint)
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction"> </a></h2><p><font color='red'>(This will be the introduction)</font></p>
 <h3 id="Equations-for-the-system">Equations for the system<a class="anchor-link" href="#Equations-for-the-system"> </a></h3><p>Our model potential (see @fig:ModelFig) consists of a one-dimensional double well oscillator that represents the reactive system, coupled to a one-dimensional harmonic oscillator representing the bath. The only coupling between the two oscillators is a Lennard-Jones-like repulsion potential term. Consequently, this model is appropriate only for nonpolar systems; our concern here is the consequence of non-bonded interactions between solvent and solute, not the more commonly studied polar interactions.</p>
-<p><img src="SB_model.png" alt="Schematic representation (left) and definitions (right) of the model system used in our study."></p>
+<p><img src="SB_model.png" alt="Schematic representation (left) and definitions (right) of the model system used in our study.">{#fig:ModelFig width=100%}</p>
 <p>The Hamiltonian that describes the system is as follows:</p>
 $$ H(\mathbf{x})=H(\mathbf{r},\mathbf{p})=\frac{p_1^2}{2\mu_1}+\frac{p_2^2}{2\mu_2}+\sum_{j=1}^{5} c_j r_1^{j-1}+c_6 (c_7-r_2 )^2+\frac{c_8}{(r_2-r_1 )^{12}} $$<p>{#eq:modelEq}</p>
 <p>where the subscripts 1 and 2 refer to the reactive system and bath oscillators respectively; $r=(r_1,r_2 )$ is the position of the two oscillators and $p=(p_1,p_2 )$ represents the conjugate momenta. The reduced mass of each oscillator is represented by $\mu$, and c are coefficients whose values are listed in @fig:ModelFig. The potential energy can be divided between $\sum_{j=1}^{5} c_j r_1^{j-1}$ as the potential of the reactive system, $V_2=c_6 (c_7-r_2 )^2$ as the potential of the bath and $V_{int}=c_8⁄(r_2-r_1 )^{-12}$ as the interaction between the two; hence $V=V_1+V_1+V_{int}$. The potential of the reactant, shown in @fig:PESFig, is chosen to have a minimum at $r_1=1.0$ and a second one at $r_1=2.0$ , with respective potential energies $V_1=0.0$ and $V_1=-10$. The maximum energy is at $r_1=1.33867$ and $V_1=2.0$. The full potential, shown in @fig:PESFig, has a saddle point at $r_1=1.36561$ and $r_2=2.161769$ at $V=3.47291$. The "reactant" minimum occurs at $r_1 = 0.98779$, $r_2 = 1.80661$, $V = 0.77040$. The "product" minimum occurs at $r_1 = 1.98517$, $r_2 = 2.75642$, $V = -6.66284$.</p>

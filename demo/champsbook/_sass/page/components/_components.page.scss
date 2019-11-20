@@ -22,6 +22,7 @@
 div.jb_cell {
   width: 100%;
   position: relative;
+  text-align: justify;
 
   @include mq($from: laptop) {
     width: $textbook-page-with-sidebar-width;
@@ -100,7 +101,8 @@ div.jb_cell {
       }
 
     img {
-      max-width: 100%;
+      width: auto;
+      height: auto;
     }
   }
 }
@@ -196,6 +198,8 @@ h1, h2, h3, h4, h5, h6 {
 div.text_cell_render > p > img,
 div.text_cell_render > p > a > img {
   max-width: 500px;
+  width: auto;
+  height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;

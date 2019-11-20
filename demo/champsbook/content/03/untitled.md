@@ -11,6 +11,7 @@ output:
   html_document:
     fig_caption: yes
     fig_height: 3
+date: \today
 - bibliography: myBib.bib
 tags:
 

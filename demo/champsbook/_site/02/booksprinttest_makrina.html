@@ -8,14 +8,14 @@
   <title>Makrina chapter</title>
   <meta name="description" content="        Makrina chapter    Exploring Isomerization Dynamics on a Potential Energy Surface with an Index-2 Saddle using Lagrangian Descriptors In this section...">
 
-  <link rel="canonical" href="http://localhost:4445/02/booksprinttest_makrina.html">
-  <link rel="alternate" type="application/rss+xml" title="CHAMPS Dynamical Systems Book" href="http://localhost:4445/feed.xml">
+  <link rel="canonical" href="http://localhost:4444/02/booksprinttest_makrina.html">
+  <link rel="alternate" type="application/rss+xml" title="CHAMPS Dynamical Systems Book" href="http://localhost:4444/feed.xml">
 
-  <meta property="og:url"         content="http://localhost:4445/02/booksprinttest_makrina.html" />
+  <meta property="og:url"         content="http://localhost:4444/02/booksprinttest_makrina.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Makrina chapter" />
 <meta property="og:description" content="        Makrina chapter    Exploring Isomerization Dynamics on a Potential Energy Surface with an Index-2 Saddle using Lagrangian Descriptors In this section..." />
-<meta property="og:image"       content="http://localhost:4445/images/logo/champs_logo.jpg" />
+<meta property="og:image"       content="http://localhost:4444/images/logo/champs_logo.jpg" />
 
 <meta name="twitter:card" content="summary">
 
@@ -24,10 +24,10 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "http://localhost:4445/02/booksprinttest_makrina.html",
+  "mainEntityOfPage": "http://localhost:4444/02/booksprinttest_makrina.html",
   "headline": "Makrina chapter",
-  "datePublished": "2019-11-18T20:22:02+00:00",
-  "dateModified": "2019-11-18T20:22:02+00:00",
+  "datePublished": "2019-11-20T18:29:42+00:00",
+  "dateModified": "2019-11-20T18:29:42+00:00",
   "description": "        Makrina chapter    Exploring Isomerization Dynamics on a Potential Energy Surface with an Index-2 Saddle using Lagrangian Descriptors In this section...",
   "author": {
     "@type": "Person",
@@ -38,14 +38,14 @@
     "name": "Data 100 at UC Berkeley",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:4445",
+      "url": "http://localhost:4444",
       "width": 60,
       "height": 60
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "http://localhost:4445",
+    "url": "http://localhost:4444",
     "height": 60,
     "width": 60
   }
@@ -350,7 +350,7 @@ function addParamToInternalLinks(hub) {
   var links = document.querySelectorAll("a").forEach(function(link) {
     var href = link.href;
     // If the link is an internal link...
-    if (href.search("http://localhost:4445") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+    if (href.search("http://localhost:4444") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
       // Assume we're an internal link, add the hub param to it
       var params = getJsonFromUrl(href);
       if (params !== false) {
@@ -657,7 +657,7 @@ initFunction(initPrint)
           
             3.
           
-          Chapter
+          Rafa Chapter
         </a>
       </li>
 
@@ -691,6 +691,39 @@ initFunction(initPrint)
             4.
           
           Vladi chapter
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/05/paper">
+        <a class="c-sidebar__entry"
+          href="/05/paper.html"
+        >
+          
+            5.
+          
+          UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems
         </a>
       </li>
 
@@ -844,8 +877,8 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this section we continue the study of <a class="citation" href="#pechukas1981">[1]</a> by considering the phase space structures that govern different reaction pathways and we  then consider the influence of symmetry breaking, bifurcation, and energy on these phase space reaction pathways.</p>
-<p>Another citation <a class="citation" href="#suits14">[2]</a></p>
+<p>In this section we continue the study of <a class="citation" href="#pechukas1981">[1], [2]</a> <a class="citation" href="#DeLeon_Marston_1989">[3]</a> by considering the phase space structures that govern different reaction pathways and we  then consider the influence of symmetry breaking, bifurcation, and energy on these phase space reaction pathways.</p>
+<p>Another citation <a class="citation" href="#suits14">[4]</a></p>
 
 </div>
 </div>
@@ -915,46 +948,8 @@ V(x,y) = x^4 - \alpha x^2 - \delta x + y^4 - y^2 + \beta x^2 y^2
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="potential.jpg" alt=""></p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-\begin{equation}
-\begin{cases}
-\dot{x} = \dfrac{\partial H}{\partial p_x} = p_x \\[.4cm]
-\dot{y} = \dfrac{\partial H}{\partial p_y} = p_y \\[.4cm]
-\dot{p}_x = -\dfrac{\partial H}{\partial x} = -\dfrac{\partial V}{\partial x} = -4 x^3 + 2 \alpha x + \delta - 2 \beta x y^2 \\[.4cm]
-\dot{p}_y = -\dfrac{\partial H}{\partial y} = -\dfrac{\partial V}{\partial y} = -4 y^3 + 2 y - 2 \beta x^2 y
-\end{cases}
-\label{ha1}
-\end{equation}
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="References">References<a class="anchor-link" href="#References"> </a></h2>
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p><ol class="bibliography"><li><span id="pechukas1981">P. Pechukas, “Transition State Theory,” <i>Annual Review of Physical Chemistry</i>, vol. 32, no. 1, pp. 159–177, 1981.</span></li>
+<li><span id="naik2019b">S. Naik and S. Wiggins, “Finding normally hyperbolic invariant manifolds in two and three degrees of freedom with Hénon-Heiles type potential,” <i>Phys. Rev. E</i>, vol. 100, no. 2, p. 022204, 2019.</span></li>
 <li><span id="suits14">A. G. Suits and D. H. Parker, “Hot Molecules: Off the beaten path,” <i>Science</i>, vol. 346, pp. 30–31, 2014.</span></li></ol></p>
 
 </div>
@@ -985,7 +980,7 @@ V(x,y) = x^4 - \alpha x^2 - \delta x + y^4 - y^2 + \beta x^2 y^2
 
     
     <a id="js-page__nav__next" class="c-page__nav__next" href="/03/Draft.html">
-      Chapter <span class="u-margin-right-tiny"></span> 〉
+      Rafa Chapter <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

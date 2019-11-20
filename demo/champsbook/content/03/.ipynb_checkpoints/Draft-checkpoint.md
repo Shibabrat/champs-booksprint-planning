@@ -1,5 +1,5 @@
 ---
-title: Chapter
+title: Rafa Chapter
 author:
 - 'Rafael Garcia-Meseguer'
 output:
@@ -21,7 +21,7 @@ csl: elsevier-without-titles.csl
 
 Our model potential (see @fig:ModelFig) consists of a one-dimensional double well oscillator that represents the reactive system, coupled to a one-dimensional harmonic oscillator representing the bath. The only coupling between the two oscillators is a Lennard-Jones-like repulsion potential term. Consequently, this model is appropriate only for nonpolar systems; our concern here is the consequence of non-bonded interactions between solvent and solute, not the more commonly studied polar interactions.
 
-![Schematic representation (left) and definitions (right) of the model system used in our study.](SB_model.png)
+![Schematic representation (left) and definitions (right) of the model system used in our study.](SB_model.png){#fig:ModelFig width=100%}
 
 The Hamiltonian that describes the system is as follows:
 

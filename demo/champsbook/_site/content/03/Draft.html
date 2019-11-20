@@ -5,17 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Chapter</title>
+  <title>Rafa Chapter</title>
   <meta name="description" content="## Introduction(This will be the introduction)### Equations for the systemOur model potential (see @fig:ModelFig) consists of a one-dimensional double well o...">
 
-  <link rel="canonical" href="http://localhost:4445/content/03/Draft.html">
-  <link rel="alternate" type="application/rss+xml" title="CHAMPS Dynamical Systems Book" href="http://localhost:4445/feed.xml">
+  <link rel="canonical" href="http://localhost:4444/content/03/Draft.html">
+  <link rel="alternate" type="application/rss+xml" title="CHAMPS Dynamical Systems Book" href="http://localhost:4444/feed.xml">
 
-  <meta property="og:url"         content="http://localhost:4445/content/03/Draft.html" />
+  <meta property="og:url"         content="http://localhost:4444/content/03/Draft.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Chapter" />
+<meta property="og:title"       content="Rafa Chapter" />
 <meta property="og:description" content="## Introduction(This will be the introduction)### Equations for the systemOur model potential (see @fig:ModelFig) consists of a one-dimensional double well o..." />
-<meta property="og:image"       content="http://localhost:4445/images/logo/champs_logo.jpg" />
+<meta property="og:image"       content="http://localhost:4444/images/logo/champs_logo.jpg" />
 
 <meta name="twitter:card" content="summary">
 
@@ -24,10 +24,10 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "http://localhost:4445/content/03/Draft.html",
-  "headline": "Chapter",
-  "datePublished": "2019-11-18T20:22:02+00:00",
-  "dateModified": "2019-11-18T20:22:02+00:00",
+  "mainEntityOfPage": "http://localhost:4444/content/03/Draft.html",
+  "headline": "Rafa Chapter",
+  "datePublished": "2019-11-20T18:29:42+00:00",
+  "dateModified": "2019-11-20T18:29:42+00:00",
   "description": "## Introduction(This will be the introduction)### Equations for the systemOur model potential (see @fig:ModelFig) consists of a one-dimensional double well o...",
   "author": {
     "@type": "Person",
@@ -38,14 +38,14 @@
     "name": "Data 100 at UC Berkeley",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:4445",
+      "url": "http://localhost:4444",
       "width": 60,
       "height": 60
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "http://localhost:4445",
+    "url": "http://localhost:4444",
     "height": 60,
     "width": 60
   }
@@ -350,7 +350,7 @@ function addParamToInternalLinks(hub) {
   var links = document.querySelectorAll("a").forEach(function(link) {
     var href = link.href;
     // If the link is an internal link...
-    if (href.search("http://localhost:4445") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+    if (href.search("http://localhost:4444") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
       // Assume we're an internal link, add the hub param to it
       var params = getJsonFromUrl(href);
       if (params !== false) {
@@ -657,7 +657,7 @@ initFunction(initPrint)
           
             3.
           
-          Chapter
+          Rafa Chapter
         </a>
       </li>
 
@@ -691,6 +691,39 @@ initFunction(initPrint)
             4.
           
           Vladi chapter
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/05/paper">
+        <a class="c-sidebar__entry"
+          href="/05/paper.html"
+        >
+          
+            5.
+          
+          UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems
         </a>
       </li>
 
@@ -818,7 +851,7 @@ initFunction(initPrint)
 
 <p>Our model potential (see @fig:ModelFig) consists of a one-dimensional double well oscillator that represents the reactive system, coupled to a one-dimensional harmonic oscillator representing the bath. The only coupling between the two oscillators is a Lennard-Jones-like repulsion potential term. Consequently, this model is appropriate only for nonpolar systems; our concern here is the consequence of non-bonded interactions between solvent and solute, not the more commonly studied polar interactions.</p>
 
-<p><img src="/content/03/SB_model.png" alt="Schematic representation (left) and definitions (right) of the model system used in our study." /></p>
+<p><img src="/content/03/SB_model.png" alt="Schematic representation (left) and definitions (right) of the model system used in our study." />{#fig:ModelFig width=100%}</p>
 
 <p>The Hamiltonian that describes the system is as follows:</p>
 
