@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Introduction</title>
-  <meta name="description" content="# IntroductionFinding the location of the Dividing Surface (DS) in chemical reactions has been the focus of many theoretical studies both in solution and in ...">
+  <title>UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems</title>
+  <meta name="description" content="## Statement of NeedIn Hamiltonian systems the fundamental phase space structure that partitions dynamically disparate trajectories and mediates transition b...">
 
-  <link rel="canonical" href="http://localhost:4444/content/03/untitled.html">
+  <link rel="canonical" href="http://localhost:4444/content/05/paper_new.html">
   <link rel="alternate" type="application/rss+xml" title="CHAMPS Dynamical Systems Book" href="http://localhost:4444/feed.xml">
 
-  <meta property="og:url"         content="http://localhost:4444/content/03/untitled.html" />
+  <meta property="og:url"         content="http://localhost:4444/content/05/paper_new.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Introduction" />
-<meta property="og:description" content="# IntroductionFinding the location of the Dividing Surface (DS) in chemical reactions has been the focus of many theoretical studies both in solution and in ..." />
+<meta property="og:title"       content="UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems" />
+<meta property="og:description" content="## Statement of NeedIn Hamiltonian systems the fundamental phase space structure that partitions dynamically disparate trajectories and mediates transition b..." />
 <meta property="og:image"       content="http://localhost:4444/images/logo/champs_logo.jpg" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "http://localhost:4444/content/03/untitled.html",
-  "headline": "Introduction",
+  "mainEntityOfPage": "http://localhost:4444/content/05/paper_new.html",
+  "headline": "UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems",
   "datePublished": "2019-11-23T18:22:09+00:00",
   "dateModified": "2019-11-23T18:22:09+00:00",
-  "description": "# IntroductionFinding the location of the Dividing Surface (DS) in chemical reactions has been the focus of many theoretical studies both in solution and in ...",
+  "description": "## Statement of NeedIn Hamiltonian systems the fundamental phase space structure that partitions dynamically disparate trajectories and mediates transition b...",
   "author": {
     "@type": "Person",
     "name": "The CHAMPS group"
@@ -843,67 +843,90 @@ initFunction(initPrint)
 
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
-              <h1 id="introduction">Introduction</h1>
+              <h2 id="statement-of-need">Statement of Need</h2>
 
-<p>Finding the location of the Dividing Surface (DS) in chemical reactions has been the focus of many theoretical studies both in solution and in vacuum. [@RN5366] This surface is characterized as a hypersurface that divides the reactants and product areas and that once being crossed by a trajectory it will not recross it again before being thermalized in the reactant or product well depending from where it came. The importance of this surface is based in the application of Transition State Theory which calculates the rate constant as the flux of trajectories going through it. [EurJOC2018] One of the strong points of TST is that, once we find the DS, the theory gives perfectly accurate result (without taking into account any error introduced by the model we are using to represent the real process). Of course finding such a surface is not an easy task and could even be technically impossible for reactions in solutions.</p>
+<p>In Hamiltonian systems the fundamental phase space structure that partitions dynamically disparate trajectories and mediates transition between multi-stable regions is an invariant manifold. In a 2N dimensional Hamiltonian phase space, the invariant manifold has 2 less dimension than the phase space and is anchored to the normally hyperbolic invariant manifold which has 3 less dimension. This becomes an unstable periodic orbit (UPO) for 2 degrees of freedom or four dimensional phase space <a class="citation" href="#wiggins_role_2016">[1]</a>. Since the UPO forms the basis for partitioning trajectories, hence their computation and stability analysis is the starting point for dynamical systems analysis. UPOsHam is meant to serve this purpose by providing examples of how to implement numerical methods for computing the unstable periodic orbits (UPOs) at any specified total energy as long as their existence is guaranteed. Even though, there is no lack of numerical methods for computing UPOs, we have found that they either lack in reproducibility, or have steep learning curve for using the software, or have been written using closed source software, and at times combination of these. Our aim is to provide an open source package that implements some of the standard methods and shows the results in the context of model problems. This is meant as a starting point to integrate other numerical methods in an open source package such that UPOs computed in dynamical systems papers can be reproduced with minimal tweaking while providing an exploratory environment to learn and develop the underlying methods.</p>
 
-<p><img src="/content/03/LDT1m1_R1P1.png" alt="" /></p>
+<h2 id="summary">Summary</h2>
 
-<p>Colons can be used to align columns.</p>
+<p>This Python package, UPOsHam, is a collection of three methods for computing unstable periodic orbits in Hamiltonian systems that model a diverse array of problems in physical sciences and engineering. The unstable periodic orbits exist in the bottleneck of the equipotential line $V(x,y) = E$ and project as lines on the configuration space $(x,y)$. The three methods described below have been implemented for three Hamiltonian systems of the form kinetic plus potential energy and are described in <a href="#examples">\S:Examples</a>. The scripts are written as demonstration of how to modify and adapt the code for a problem of interest.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Tables</th>
-      <th style="text-align: center">Are</th>
-      <th style="text-align: right">Cool</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>col 3 is</td>
-      <td style="text-align: center">right-aligned</td>
-      <td style="text-align: right">$1600</td>
-    </tr>
-    <tr>
-      <td>col 2 is</td>
-      <td style="text-align: center">centered</td>
-      <td style="text-align: right">$12</td>
-    </tr>
-    <tr>
-      <td>zebra stripes</td>
-      <td style="text-align: center">are neat</td>
-      <td style="text-align: right">$1</td>
-    </tr>
-  </tbody>
-</table>
+<p>The computed unstable periodic orbits using the three methods are compared for a model problem in Figure \ref{fig:allinone_coupled}.</p>
 
-<p>There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don’t need to make the 
-raw Markdown line up prettily. You can also use inline Markdown.</p>
+<h3 id="features-available-methods">Features: Available Methods</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Markdown</th>
-      <th>Less</th>
-      <th>Pretty</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em>Still</em></td>
-      <td><code class="language-plaintext highlighter-rouge">renders</code></td>
-      <td><strong>nicely</strong></td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-  </tbody>
-</table>
+<p>In this package, the user has the option to choose between the three methods described below. These are implemented in separate scripts with functions that can be modified to define the total energy (Hamiltonian), potential energy, vector field, Jacobian, variational equations <a class="citation" href="#Parker_1989">[2]</a>.</p>
 
+<p><strong>Turning point (TP)</strong></p>
+
+<p>This method is based on finding the UPO by detecting trajectories initialized on the equipotential contour ($V(x,y) = E$ where $V(x,y)$ is the potetial energy function and $E$ is the total energy) that turn in the opposite directions <a class="citation" href="#Pollak_1980">[3]</a>. This method relies on the fact that for Hamiltonians of the form kinetic plus potential energy the UPO is the limiting trajectory that bounces back and forth between the equipotential contour corresponding to the given total energy. So to converge on this limiting trajectory, the turning point method iteratively decreases the gap between the bounding trajectories that turn in the opposite directions. Detection of turning is done using a dot product condition which leads to stalling of the method beyond a certain tolerance (typically $10^{-6}$ in the examples here.)</p>
+
+<p><strong>Turning point based on configuration difference  (TPCD)</strong></p>
+
+<p>Based on the turning point approach, we have implemented a <strong>new method</strong> which shows stable convergence and does not rely on the dot product formula. Suppose we have found two initial conditions on a given equipotential contour and they turn in the opposite directions. If the difference in $x$-coordinates is small ($\approx 10^{-2}$), the generated trajectories will approach the UPO from either sides. If the difference in $x$-coordinates is large, we can integrate the Hamilton’s equations for a guess time interval and find the turning point (event using ODE event detection) at which the trajectories bounce back from the far side of the equipotential contour in opposite directions. We choose these two points as our initial guess and the difference of $x$-coordinates become small now. Without loss of generality, this method can be modified to either pick the difference of $y$-coordinates or a combination of $x$ and $y$ coordinates. This choice will depend on the orientation of the potential energy surface’s bottleneck in the configuration space.</p>
+
+<p><strong>Differential correction and numerical continuation (DCNC)</strong></p>
+
+<p>This method is based on small ($\approx 10^{-5}$) corrections to the initial conditions of an UPO and continuing to desired total energy. The procedure is started from the linear solutions of the Hamilton’s equations and which generates a small amplitude ($\approx 10^{-5}$) UPO. This is fed into the procedure that calculates correction to the initial condition based on error in the terminal condition of the UPO. This leads to convergence within 3 steps in the sense of the trajectory returning to the initial condition. Once a small amplitude UPO is obtained, numerical continuation increases the amplitude and correspondingly total energy, while a combination of bracketing and bisection method computes the UPO at the desired energy for a specified tolerance (missing reference).</p>
+
+<h2 id="examples">Examples</h2>
+
+<p>Consider the following two degrees-of-freedom Hamiltonian model where $x, y$ are configuration space coordinates and $p_x,p_y$ are corresponding momenta, $V(x,y)$ is the potential energy, and $T(x,y)$ is the kinetic energy.</p>
+
+<h3 id="uncoupled-quartic-hamiltonian">Uncoupled quartic Hamiltonian</h3>
+
+<p>\begin{equation}
+    \mathcal{H}(x,y,p_x,p_y) = \frac{p_x^2}{2} - \alpha \frac{x^2}{2} + \beta \frac{x^4}{4} + \frac{\omega}{2}\left( p_y^2 + y^2 \right)
+\end{equation}</p>
+
+<h3 id="coupled-quartic-hamiltonian">Coupled quartic Hamiltonian</h3>
+
+<p>\begin{equation}
+    \mathcal{H}(x,y,p_x,p_y) = \frac{p_x^2}{2} - \alpha \frac{x^2}{2} + \beta \frac{x^4}{4} + \frac{\omega}{2}\left( p_y^2 + y^2 \right) + \frac{\epsilon}{2}(x - y)^2
+\end{equation}</p>
+
+<h3 id="dbham">DeLeon-Berne Hamiltonian</h3>
+
+<p>This Hamiltonian has been studied as a model of isomerization of a single molecule that undergoes conformational change <a class="citation" href="#Deleon_Berne_1981">[4], [5]</a> and exhibits regular and chaotic dynamics relevant for chemical reactions.</p>
+
+<p>\begin{equation}
+\mathcal{H}(x,y,p_x,p_y) = T(p_x, p_y) + V_{\rm DB}(x, y) = \frac{p_x^2}{2m_A} + \frac{p_y^2}{2m_B} + V_{\rm DB}(x, y)
+\end{equation}  <br />
+where the potential energy function $V_{\rm DB}(x,y)$ is</p>
+
+<p>\begin{equation}
+\begin{aligned}
+V_{\rm DB}(x,y) = &amp;  V(x) + V(y) + V(x,y) <br />
+V(y) = &amp; 4y^2(y^2 - 1) + \epsilon_s <br />
+V(x) = &amp; D_x\left[ 1 - \exp(-\lambda x) \right]^2 <br />
+V(x,y) = &amp; 4y^2(y^2 - 1)\left[ \exp(-\zeta \lambda x) - 1 \right]
+\end{aligned}
+\label{eqn:pot_energy_db}
+\end{equation}</p>
+
+<p>The parameters in the model are $m_A, m_B$ which represent mass of the isomers, while $\epsilon_s, D_x$ denote the energy of the saddle, dissociation energy of the Morse oscillator, respectively, and will be kept fixed in this study, $\lambda, \zeta$ denote the range of the Morse oscillator and coupling parameter between the $x$ and $y$ configuration space coordinates, respectively.</p>
+
+<h2 id="visualization-unstable-periodic-orbits">Visualization: Unstable periodic orbits</h2>
+
+<p><img src="/content/05/allinone_coupled.pdf" alt="Comparing the TP, TPCD, DCNC methods for the coupled quartic Hamiltonian. \label{fig:allinone_coupled}" /></p>
+
+<p><img src="/content/05/allinone_tpcd.pdf" alt="Comparing the TPCD method for the three Hamiltonians \label{fig:allinone_newmethod}" /></p>
+
+<h2 id="relation-to-ongoing-research-projects">Relation to ongoing research projects</h2>
+
+<p>We are developing geometric methods of phase space transport in the context of chemical reaction dynamics that rely heavily on identifying and computing the unstable periodic orbits. Manuscript related to the <a href="#dbham">De Leon-Berne model</a> is under preparation.</p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<p>We acknowledge the support of EPSRC Grant No. EP/P021123/1 and Office of Naval Research (Grant No. N00014-01-1-0769). The authors would like to acknowledge the London Mathematical Society and School of Mathematics at the University of Bristol for supporting the undergraduate research bursary 2019. We acknowledge contributions from Shane Ross for writing the early MATLAB version of the differential correction and numerical continuation code.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><span id="wiggins_role_2016">S. Wiggins, “The role of normally hyperbolic invariant manifolds (NHIMs) in the context of the phase space setting for chemical reaction dynamics,” <i>Regular and Chaotic Dynamics</i>, vol. 21, no. 6, pp. 621–638, Nov. 2016.</span></li>
+<li><span id="Parker_1989">T. S. Parker and L. O. Chua, <i>Practical Numerical Algorithms for Chaotic Systems</i>. New York, NY, USA: Springer-Verlag New York, Inc., 1989.</span></li>
+<li><span id="Pollak_1980">E. Pollak, M. S. Child, and P. Pechukas, “Classical transition state theory: A lower bound to the reaction probability,” <i>The Journal of Chemical Physics</i>, vol. 72, no. 3, pp. 1669–1678, 1980.</span></li>
+<li><span id="Deleon_Berne_1981">N. De Leon and B. J. Berne, “Intramolecular rate process: Isomerization dynamics and the transition to chaos,” <i>The Journal of Chemical Physics</i>, vol. 75, no. 7, pp. 3495–3510, 1981.</span></li>
+<li><span id="DeLeon_Marston_1989">N. De Leon and C. C. Marston, “Order in chaos and the dynamics and kinetics of unimolecular conformational isomerization,” <i>The Journal of Chemical Physics</i>, vol. 91, no. 6, pp. 3405–3425, 1989.</span></li></ol>
 
             </div>
             <div class="c-textbook__footer" id="textbook_footer">

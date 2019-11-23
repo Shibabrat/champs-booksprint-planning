@@ -8,9 +8,9 @@ pagenum: 3
 prev_page:
   url: /03/Draft_new.html
 next_page:
-  url: /05/paper.html
+  url: /05/paper_new.html
 suffix: .ipynb
-search: u theta r ch potential equation label frac c range model h cite m pi eq leq chesnavichs chesnavich begin end energy fig values sec ref hamiltonian core right where coup correspond figure x q system rigid mu left aa short shown pot equilibrium cmr molecule roaming atom pr p phi body coordinate surface height plot lines krajnakinfluence form e re parameter ue mauguiereroaming four symmetry sym points isomerisation saddle introduction intro paper outlined follows introduce ion reaction discuss dynamical mechanism underlying terms families unstable periodic orbits associated invariant manifolds due degree freedom comprised mobile ezrachesnavich chesham polar coordinates describing
+search: u theta r ch potential equation label frac c file roamingv range model h cite m pi chesnavich eq leq chesnavichs begin end energy fig values sec ref hamiltonian core right where coup correspond figure x q system rigid mu left short shown pot equilibrium cmr molecule roaming atom pr p phi body coordinate unicode xb surface plot lines form e re parameter ue mauguiereroaming four symmetry sym points isomerisation saddle introduction intro paper outlined follows introduce ion reaction discuss dynamical mechanism underlying terms families unstable periodic orbits associated invariant manifolds due degree freedom comprised mobile ezrachesnavich chesham polar coordinates
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -68,8 +68,8 @@ terms of families of unstable periodic orbits and their associated invariant man
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The  CH$_4^+$ model due to Chesnavich  is a 2 degree of freedom Hamiltonian system<br>
-comprised of a rigid CH$_3^+$ molecule (core) and a mobile H atom {% cite Chesnavich1986 %}. 
-The system Hamiltonian is {% cite ezra2019chesnavich %}</p>
+comprised of a rigid CH$_3^+$ molecule (core) and a mobile H atom {% cite Chesnavich1986 --file roaming_v8 %}. 
+The system Hamiltonian is {% cite ezra2019chesnavich --file roaming_v8 %}</p>
 \begin{equation}
 H(r,\theta,p_r, p_\theta) = \frac{1}{2} \frac{p_r^2}{\mu} + \frac{1}{2}p_\theta^2 \left(\frac{1}{\mu r^2}+\frac{1}{I_{CH_3}}\right) + U(r,\theta),
 \label{eq:chesHam}
@@ -78,7 +78,7 @@ H-atom in a body-fixed frame attached to the CH$_3^+$ core
 (the coordinate $\phi$ is ignorable in this model).<br>
 The reduced mass of the system is given by the expression 
 $\mu=\frac{m_{CH_3}m_{H}}{m_{CH_3}+m_{H}}$, where $m_{H}=1.007825$ u and $m_{CH_3}=3m_{H}+12.0$ u, 
-and the moment of inertia of the rigid body CH$_3^+$ has the value  $I_{CH_3}=2.373409$~u\AA$^2$.</p>
+and the moment of inertia of the rigid body CH$_3^+$ has the value  $I_{CH_3}=2.373409 \unicode{x212B}^2$.</p>
 <p>The potential energy function $U(r,\theta)$ is made up  of a radial long range potential
 energy term $U_{CH}$ and a short range potential $U_{coup}$ that models the short range anisotropy of the rigid CH$_3^+$ core:</p>
 \begin{equation}\label{eq:U}
@@ -97,8 +97,8 @@ of these features as shown in Fig. \ref{fig:pot}.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure class="image">
- <img width="560" height="315" src="figure1.jpg">
- <figcaption>Contour plot of Chesnavich's potential energy surface $U$ for $a=1$. Dashed lines correspond to $U&lt;0$, solid lines correspond to $U\geq0$. Contours correspond to values of potential shown on the colorbar to the right, with some values indicated in the plot. This figure is from {% cite krajnak2018influence %}.
+ <img src="figure1.jpg">
+ <figcaption>Contour plot of Chesnavich's potential energy surface $U$ for $a=1$. Dashed lines correspond to $U&lt;0$, solid lines correspond to $U\geq0$. Contours correspond to values of potential shown on the colorbar to the right, with some values indicated in the plot. This figure is from {% cite Chesnavich1986 --file roaming_v8 %} .
 <!-- <\figcaption>
 <\figure> -->
 \label{fig:pot}</p>
@@ -112,30 +112,27 @@ of these features as shown in Fig. \ref{fig:pot}.</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The long range potential has the form:
-\begin{equation}\label{eq:UCH}
+<p>The long range potential has the form:</p>
+\begin{equation}
  U_{CH} (r) =  \frac{D_e}{c_1 - 6} \left( 2 (3-c_2) e^{c_1 (1-x)}  - \left( 4 c_2 - c_1 c_2 + c_1 \right) x^{-6} - (c_1 - 6) c_2 x^{-4} \right), 
-\end{equation}
-where $x = \frac{r}{r_e}$ and we take the  parameter values as  in the original work {% cite Chesnavich1986 %}.
-The short range hindered rotor  potential $U_{coup}$ has the form:
+ \label{eq:UCH}
+\end{equation}<p>where $x = \frac{r}{r_e}$ and we take the  parameter values as  in the original work {% cite Chesnavich1986 --file roaming_v8 %} .</p>
+<p>The short range hindered rotor  potential $U_{coup}$ has the form:</p>
 \begin{equation}\label{eq:Ucoup}
  U_{coup} (r,\theta) = \frac{U_e e^{-a(r-r_e)^2}}{2} (1 - \cos 2 \theta ),
-\end{equation}
-where $U_e$ is the equilibrium barrier height. 
+\end{equation}<p>where $U_e$ is the equilibrium barrier height. 
 The distance at which the  transition occurs from rotation to vibration is 
 determined by the parameter $a$ (in \AA$^{-2}$). 
-Various values of $a$ have been considered in previous works. In particular,<br>
-$a=1$ {% cite Chesnavich1986,mauguiere2014roaming,mauguiere2014multiple,krajnak2018phase %}, 
-$a=4$ {% cite Chesnavich1986,mauguiere2014roaming %} and a range of values $0.7\leq a\leq 8$. {% cite krajnak2018influence %}</p>
+Various values of $a$ have been considered in previous works. In particular,  $a=1$ {% cite Chesnavich1986 mauguiere2014roaming mauguiere2014multiple krajnak2018phase --file roaming_v8 %} , 
+$a=4$ {% cite Chesnavich1986 mauguiere2014roaming --file roaming_v8 %} and a range of values $0.7\leq a\leq 8$. {% cite krajnak2018influence --file roaming_v8 %}</p>
 <p>The CH$_3^+$ core is a symmetric top in Chesnavich's model. 
 Although the range of the coordinate $\theta$ is $0 \leq \theta \leq \pi$, 
 in the planar (zero overall angular momentum) version of the model the range of $\theta$ 
-is extended to $0 \leq \theta \leq 2 \pi$, and the potential has a four-fold symmetry:
+is extended to $0 \leq \theta \leq 2 \pi$, and the potential has a four-fold symmetry:</p>
 \begin{equation}
 U(r,\theta)=U(r,-\theta)=U(r,\pi-\theta)=U(r,\pi+\theta).
 \label{eq:sym}
-\end{equation}</p>
-<p>The potential admits four pairs of equilibrium points pairwise related by symmetry \eqref{eq:sym}, 
+\end{equation}<p>The potential admits four pairs of equilibrium points pairwise related by symmetry \eqref{eq:sym}, 
 as listed in Tab. \ref{table:equil} and shown in Fig. \ref{fig:pot}.</p>
 
 </div>
@@ -150,7 +147,7 @@ as listed in Tab. \ref{table:equil} and shown in Fig. \ref{fig:pot}.</p>
 <table>
 <thead><tr>
 <th>Energy (kcal mol$^{-1}$)</th>
-<th>$r$ (\AA)</th>
+<th>$r$ ($\unicode{x212B}$)</th>
 <th>$\theta$ (radians)</th>
 <th>Significance</th>
 <th>Label</th>
@@ -198,7 +195,8 @@ as listed in Tab. \ref{table:equil} and shown in Fig. \ref{fig:pot}.</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<!--- load bibfile somehow --->
+<p>{% bibliography --file roaming_v8 --cited %}</p>
+
 </div>
 </div>
 </div>

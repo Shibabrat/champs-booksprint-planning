@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "http://localhost:4444/content/03/Draft_new.html",
   "headline": "Rafa Chapter",
-  "datePublished": "2019-11-23T15:44:16+00:00",
-  "dateModified": "2019-11-23T15:44:16+00:00",
+  "datePublished": "2019-11-23T18:22:09+00:00",
+  "dateModified": "2019-11-23T18:22:09+00:00",
   "description": "## Introduction(This will be the introduction)### Equations for the systemOur model potential (see @fig:ModelFig) consists of a one-dimensional double well o...",
   "author": {
     "@type": "Person",
@@ -716,9 +716,9 @@ initFunction(initPrint)
 
       
       
-      <li class="c-sidebar__chapter" data-url="/05/paper">
+      <li class="c-sidebar__chapter" data-url="/05/paper_new">
         <a class="c-sidebar__entry"
-          href="/05/paper.html"
+          href="/05/paper_new.html"
         >
           
             5.
@@ -888,7 +888,7 @@ initFunction(initPrint)
 
 <p>The geometrical structure of the DS sampled in this manner is a one parameter family of circles. The parameter defining the family is given by the distance along the projection of the PO onto the configuration space from Steps 1-3 in the algorithm above, and the momentum-space circles are given by the following equation obtained from the Hamiltonian:</p>
 
-<p><script type="math/tex">\frac{p_x^2}{2\mu_x}+\frac{p_y^2}{2\mu_y}=E-V(x_i,y_i)</script>{#eq:DSGeomEq}</p>
+<script type="math/tex; mode=display">\frac{p_x^2}{2\mu_x}+\frac{p_y^2}{2\mu_y}=E-V(x_i,y_i) \label{DSGeomEq}</script>
 
 <h4 id="effect-of-the-solvent-mass">Effect of the Solvent Mass</h4>
 
@@ -896,7 +896,7 @@ initFunction(initPrint)
 
 <p>In @fig:DSCloseFig (top) we can see the projection of the calculated PODSs in configuration space. @fig:DSCloseFig also includes two approximations to the DS explained in the caption and shows how the three of them respond as $\mu_2$ changes. It can be seen that, for low reduced masses, the approximate DSs are close to the PODS. That is because the bath can rapidly adapt to the position of the reactive system. However, as $\mu_2$ increases the PODS starts to curve and to displace from the approximate DSs, moving closer to the product well.</p>
 
-<p>The geometry of this one parameter family of circles depends on the nature of the projection of the PO into configuration space. In this particular case the PO projections are arcs where a configuration space point on the projection of the PO moves back and forth along the arc. This means that the endpoints of the arc are turning points with $p_x=p_y=0$, where the circles defined by eq. \ref{DSGeomEq} shrink to points. This implies that the geometry of the one parameter family of circles defines a 2D sphere (see @fig:DSCloseFig bottom).</p>
+<p>The geometry of this one parameter family of circles depends on the nature of the projection of the PO into configuration space. In this particular case the PO projections are arcs where a configuration space point on the projection of the PO moves back and forth along the arc. This means that the endpoints of the arc are turning points with $p_x=p_y=0$, where the circles defined by eq. \eqref{DSGeomEq} shrink to points. This implies that the geometry of the one parameter family of circles defines a 2D sphere (see @fig:DSCloseFig bottom).</p>
 
 <p><img src="/content/03/PODS_DSshape.png" alt="(Top)Close-up of the PES of the full system, near the saddle point region at different reduced masses of the bath. Each of the axis scales were weighted by the square root of its coordinate mass. The dashed red line is the intrinsic reaction coordinate (IRC). The blue line is DS if one assumes that the reaction coordinate is $r_1$. The red line is the DS projection at the saddle point, which is locally orthogonal to the IRC (It does not look orthogonal because of the choice of axis scales). The green line is the projection of the PO that defines the Dividing surface. (Bottom) Schematic representation of the DS's geometrical structure for the different reduced masses. The yellow structure represents the possible momenta depending of the location in the DS." />{#fig:DSCloseFig width=100%}</p>
 
