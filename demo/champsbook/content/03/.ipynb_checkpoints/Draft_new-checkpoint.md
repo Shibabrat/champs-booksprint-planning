@@ -41,7 +41,7 @@ where the subscripts 1 and 2 refer to the reactive system and bath oscillators r
 
 One of the reasons for choosing this system was the relative ease on computing the periodic orbits that define the PODSs. These calculations (and all the ones that will follow) were done at an energy of 3.691966889, i.e. slightly above the energy of the saddle point.
 
-In order to understand the properties of the trajectories that depart from the DS we need to sample its points in phase space. The procedure, applicable to a 2 DoF Hamiltonian system, selects points on a 2D surface with fixed total energy (E), where the periodic orbit forms the one dimensional boundary of the DS. The algorithm is as described in [@JCP2016Maug; @ezra2018sampling]:
+In order to understand the properties of the trajectories that depart from the DS we need to sample its points in phase space. The procedure, applicable to a 2 DoF Hamiltonian system, selects points on a 2D surface with fixed total energy (E), where the periodic orbit forms the one dimensional boundary of the DS. The algorithm is as described in {% cite JCP2016Maug ezra2018sampling --file myBib %}:
 
 1. Locate an unstable PO.
 2. Project the unstable PO into configuration space, which gives a curve in configuration space.
@@ -55,7 +55,7 @@ In order to understand the properties of the trajectories that depart from the D
 
 The geometrical structure of the DS sampled in this manner is a one parameter family of circles. The parameter defining the family is given by the distance along the projection of the PO onto the configuration space from Steps 1-3 in the algorithm above, and the momentum-space circles are given by the following equation obtained from the Hamiltonian:
 
-$$ \frac{p_x^2}{2\mu_x}+\frac{p_y^2}{2\mu_y}=E-V(x_i,y_i) \label{DSGeomEq}$$
+$$ \frac{p_x^2}{2\mu_x}+\frac{p_y^2}{2\mu_y}=E-V(x_i,y_i) $${#eq:DSGeomEq}
 
 #### Effect of the Solvent Mass
 
@@ -96,3 +96,6 @@ The brighter colored bands visible on the reactant sides ($p_\perp <0$) in Figur
 <font color='red'>(...)</font>
 
 ## References
+
+
+{% bibliography --file myBib --cited %}

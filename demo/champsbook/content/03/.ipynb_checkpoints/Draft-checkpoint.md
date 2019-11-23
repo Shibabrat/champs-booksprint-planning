@@ -55,7 +55,7 @@ In order to understand the properties of the trajectories that depart from the D
 
 The geometrical structure of the DS sampled in this manner is a one parameter family of circles. The parameter defining the family is given by the distance along the projection of the PO onto the configuration space from Steps 1-3 in the algorithm above, and the momentum-space circles are given by the following equation obtained from the Hamiltonian:
 
-$$ \frac{p_x^2}{2\mu_x}+\frac{p_y^2}{2\mu_y}=E-V(x_i,y_i) $${#eq:DSGeomEq}
+$$ \frac{p_x^2}{2\mu_x}+\frac{p_y^2}{2\mu_y}=E-V(x_i,y_i) \label{DSGeomEq}$$
 
 #### Effect of the Solvent Mass
 
@@ -96,7 +96,3 @@ The brighter colored bands visible on the reactant sides ($p_\perp <0$) in Figur
 <font color='red'>(...)</font>
 
 ## References
-
-```python
-
-```

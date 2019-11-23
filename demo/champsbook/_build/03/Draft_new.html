@@ -1,6 +1,6 @@
 ---
 redirect_from:
-  - "/03/draft"
+  - "/03/draft-new"
 title: |-
   Rafa chapter
 pagenum: 2
@@ -42,7 +42,7 @@ $$ H(\mathbf{x})=H(\mathbf{r},\mathbf{p})=\frac{p_1^2}{2\mu_1}+\frac{p_2^2}{2\mu
 <h2 id="Phase-Space-Structures">Phase Space Structures<a class="anchor-link" href="#Phase-Space-Structures"> </a></h2><p><font color='red'>(Here I will explain that for this problem I'll be focusing on the PODS)</font></p>
 <h3 id="Periodic-Orbit-Dividing-Surface">Periodic Orbit Dividing Surface<a class="anchor-link" href="#Periodic-Orbit-Dividing-Surface"> </a></h3><p><font color='red'>(Explanation of PODS)</font></p>
 <p>One of the reasons for choosing this system was the relative ease on computing the periodic orbits that define the PODSs. These calculations (and all the ones that will follow) were done at an energy of 3.691966889, i.e. slightly above the energy of the saddle point.</p>
-<p>In order to understand the properties of the trajectories that depart from the DS we need to sample its points in phase space. The procedure, applicable to a 2 DoF Hamiltonian system, selects points on a 2D surface with fixed total energy (E), where the periodic orbit forms the one dimensional boundary of the DS. The algorithm is as described in [@JCP2016Maug; @ezra2018sampling]:</p>
+<p>In order to understand the properties of the trajectories that depart from the DS we need to sample its points in phase space. The procedure, applicable to a 2 DoF Hamiltonian system, selects points on a 2D surface with fixed total energy (E), where the periodic orbit forms the one dimensional boundary of the DS. The algorithm is as described in {% cite JCP2016Maug ezra2018sampling --file myBib %}:</p>
 <ol>
 <li>Locate an unstable PO.</li>
 <li>Project the unstable PO into configuration space, which gives a curve in configuration space.</li>
@@ -69,8 +69,7 @@ $$ \frac{p_x^2}{2\mu_x}+\frac{p_y^2}{2\mu_y}=E-V(x_i,y_i) $$<p>{#eq:DSGeomEq}</p
 <h4 id="Method-1">Method 1<a class="anchor-link" href="#Method-1"> </a></h4><p><font color='red'>(...)</font></p>
 <h4 id="Method-2">Method 2<a class="anchor-link" href="#Method-2"> </a></h4><p><font color='red'>(...)</font></p>
 <h2 id="Applications-to-multiple-DoF-problems">Applications to multiple DoF problems<a class="anchor-link" href="#Applications-to-multiple-DoF-problems"> </a></h2><p><font color='red'>(...)</font></p>
-<h2 id="References">References<a class="anchor-link" href="#References"> </a></h2><div class="highlight"><pre><span></span>
-</pre></div>
+<h2 id="References">References<a class="anchor-link" href="#References"> </a></h2><p>{% bibliography --file myBib --cited %}</p>
 
 </div>
 </div>
