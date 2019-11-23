@@ -1,4 +1,41 @@
-# <img src="demo/champsbook/content/images/logo/champs_logo.jpg" width=100 /> CHAMPS Book-Sprint Planning Repo
+<!-- #region -->
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+
+
+
+<div class="row">
+  <div class="column">  
+      <a href="https://champsproject.com/">
+          <img src="demo/champsbook/content/images/logo/champs_logo.jpg" style="width:15%">
+      </a>    
+  </div>
+  <div class="column">
+    <a href="http://www.bristol.ac.uk/maths/">
+        <img src="demo/champsbook/content/images/logo/uob-logo.png" style="width:10%">
+    </a>
+  </div>
+</div>
+
+<!-- #endregion -->
+
+# CHAMPS Book-Sprint Planning Repo
 
 Repo created to store example and test notebooks for book building using [`jupyter-book`](https://github.com/jupyter/jupyter-book) 
  
