@@ -1,4 +1,4 @@
-# <img src="demo/champsbook/content/images/logo/champs_logo.jpg" width=40 /> CHAMPS Book-Sprint Planning Repo
+# <img src="demo/champsbook/content/images/logo/champs_logo.jpg" width=100 /> CHAMPS Book-Sprint Planning Repo
 
 Repo created to store example and test notebooks for book building using [`jupyter-book`](https://github.com/jupyter/jupyter-book) 
  
