@@ -9,7 +9,7 @@
 
 
 
-# CHAMPS Book-Sprint Planning Repo
+# CHAMPS Book-Sprint Planning
 
 Repo created to store example and test notebooks for book building using [`jupyter-book`](https://github.com/jupyter/jupyter-book) 
  
@@ -23,6 +23,3 @@ Repo created to store example and test notebooks for book building using [`jupyt
 * Find out how to render `R Markdown`-native captions for tables and figures
 * Make a script to automatically turn `R Markdown` citation syntax to [`jekyll-scholar`](https://github.com/inukshuk/jekyll-scholar) syntax
 * Test `python` API to run anti-plagiarism tool in a scriptable way. Alternative, add notes for use of software via [Balckboard](https://www.ole.bris.ac.uk/). 
-
-
-Hi there!
