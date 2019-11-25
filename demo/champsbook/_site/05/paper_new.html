@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems</title>
-  <meta name="description" content="        Naik paper    Statement of Need In Hamiltonian systems the fundamental phase space structure that partitions dynamically disparate trajectories and m...">
+  <title>Naik paper</title>
+  <meta name="description" content="        Naik paperS. Naik    Statement of Need In Hamiltonian systems the fundamental phase space structure that partitions dynamically disparate trajectorie...">
 
   <link rel="canonical" href="http://localhost:4444/05/paper_new.html">
   <link rel="alternate" type="application/rss+xml" title="CHAMPS Dynamical Systems Book" href="http://localhost:4444/feed.xml">
 
   <meta property="og:url"         content="http://localhost:4444/05/paper_new.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems" />
-<meta property="og:description" content="        Naik paper    Statement of Need In Hamiltonian systems the fundamental phase space structure that partitions dynamically disparate trajectories and m..." />
+<meta property="og:title"       content="Naik paper" />
+<meta property="og:description" content="        Naik paperS. Naik    Statement of Need In Hamiltonian systems the fundamental phase space structure that partitions dynamically disparate trajectorie..." />
 <meta property="og:image"       content="http://localhost:4444/images/logo/champs_logo.jpg" />
 
 <meta name="twitter:card" content="summary">
@@ -25,10 +25,10 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage": "http://localhost:4444/05/paper_new.html",
-  "headline": "UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems",
-  "datePublished": "2019-11-23T18:22:09+00:00",
-  "dateModified": "2019-11-23T18:22:09+00:00",
-  "description": "        Naik paper    Statement of Need In Hamiltonian systems the fundamental phase space structure that partitions dynamically disparate trajectories and m...",
+  "headline": "Naik paper",
+  "datePublished": "2019-11-25T12:59:01+00:00",
+  "dateModified": "2019-11-25T12:59:01+00:00",
+  "description": "        Naik paperS. Naik    Statement of Need In Hamiltonian systems the fundamental phase space structure that partitions dynamically disparate trajectorie...",
   "author": {
     "@type": "Person",
     "name": "The CHAMPS group"
@@ -657,7 +657,7 @@ initFunction(initPrint)
           
             3.
           
-          Rafa Chapter
+          Rafa chapter
         </a>
       </li>
 
@@ -723,7 +723,40 @@ initFunction(initPrint)
           
             5.
           
-          UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems
+          Naik paper
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/test_page">
+        <a class="c-sidebar__entry"
+          href="/test_page.html"
+        >
+          
+            6.
+          
+          Writing LaTeX-like in Jupyter
         </a>
       </li>
 
@@ -845,6 +878,7 @@ initFunction(initPrint)
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
     <div id="page-info"><div id="page-title">Naik paper</div>
+<div id="page-author">S. Naik</div>
 </div>
     <div class="jb_cell">
 
@@ -857,7 +891,7 @@ initFunction(initPrint)
 <p><strong>Turning point (TP)</strong></p>
 <p>This method is based on finding the UPO by detecting trajectories initialized on the equipotential contour ($V(x,y) = E$ where $V(x,y)$ is the potetial energy function and $E$ is the total energy) that turn in the opposite directions <a class="citation" href="#Pollak_1980">[3]</a>. This method relies on the fact that for Hamiltonians of the form kinetic plus potential energy the UPO is the limiting trajectory that bounces back and forth between the equipotential contour corresponding to the given total energy. So to converge on this limiting trajectory, the turning point method iteratively decreases the gap between the bounding trajectories that turn in the opposite directions. Detection of turning is done using a dot product condition which leads to stalling of the method beyond a certain tolerance (typically $10^{-6}$ in the examples here.)</p>
 <p><strong>Turning point based on configuration difference  (TPCD)</strong></p>
-<p>Based on the turning point approach, we have implemented a <strong>new method</strong> which shows stable convergence and does not rely on the dot product formula. Suppose we have found two initial conditions on a given equipotential contour and they turn in the opposite directions. If the difference in $x$-coordinates is small ($\approx 10^{-2}$), the generated trajectories will approach the UPO from either sides. If the difference in $x$-coordinates is large, we can integrate the Hamilton's equations for a guess time interval and find the turning point (event using ODE event detection) at which the trajectories bounce back from the far side of the equipotential contour in opposite directions. We choose these two points as our initial guess and the difference of $x$-coordinates become small now. Without loss of generality, this method can be modified to either pick the difference of $y$-coordinates or a combination of $x$ and $y$ coordinates. This choice will depend on the orientation of the potential energy surface's bottleneck in the configuration space.</p>
+<p>Based on the turning point approach, we have implemented a <strong>new method</strong> which shows stable convergence and does not rely on the dot product formula. Suppose we have found two initial conditions on a given equipotential contour and they turn in the opposite directions. If the difference in $x$-coordinates is small ($\approx 10^{-2} $), the generated trajectories will approach the UPO from either sides. If the difference in $x$-coordinates is large, we can integrate the Hamilton's equations for a guess time interval and find the turning point (event using ODE event detection) at which the trajectories bounce back from the far side of the equipotential contour in opposite directions. We choose these two points as our initial guess and the difference of $x$-coordinates become small now. Without loss of generality, this method can be modified to either pick the difference of $y$-coordinates or a combination of $x$ and $y$ coordinates. This choice will depend on the orientation of the potential energy surface's bottleneck in the configuration space.</p>
 <p><strong>Differential correction and numerical continuation (DCNC)</strong></p>
 <p>This method is based on small ($\approx 10^{-5}$) corrections to the initial conditions of an UPO and continuing to desired total energy. The procedure is started from the linear solutions of the Hamilton's equations and which generates a small amplitude ($\approx 10^{-5}$) UPO. This is fed into the procedure that calculates correction to the initial condition based on error in the terminal condition of the UPO. This leads to convergence within 3 steps in the sense of the trajectory returning to the initial condition. Once a small amplitude UPO is obtained, numerical continuation increases the amplitude and correspondingly total energy, while a combination of bracketing and bisection method computes the UPO at the desired energy for a specified tolerance (missing reference).</p>
 <h2 id="Examples-{#examples}">Examples {#examples}<a class="anchor-link" href="#Examples-{#examples}"> </a></h2><p>Consider the following two degrees-of-freedom Hamiltonian model where $x, y$ are configuration space coordinates and $p_x,p_y$ are corresponding momenta, $V(x,y)$ is the potential energy, and $T(x,y)$ is the kinetic energy.</p>
@@ -916,8 +950,8 @@ V(x,y) = &amp; 4y^2(y^2 - 1)\left[ \exp(-\zeta \lambda x) - 1 \right]
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/contributing.html">
-      Contributing to Jupyter Book <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/test_page.html">
+      Writing LaTeX-like in Jupyter <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

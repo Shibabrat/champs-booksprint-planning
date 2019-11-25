@@ -19,19 +19,28 @@
 
 - url: /01/ham_bif
   title: Dynamical Systems Concepts
+  author: Stephen Wiggins  
     
 - url: /02/booksprinttest_makrina
   title: Makrina chapter
+  author: Makrina Agaoglou
     
 - url: /03/Draft_new
   title: Rafa chapter
+  author: Rafael Garcia-Meseguer
 
 - url: /04/test
   title: Vladi chapter
+  author: Vladimir Krajnak
 
 - url: /05/paper_new
   title: Naik paper
+  author: S. Naik 
     
+- url: /test_page
+  title: Writing LaTeX-like in Jupyter
+  author: Broncio Aguilar-Sanjuan
+
 - url: /contributing
   not_numbered: true
     

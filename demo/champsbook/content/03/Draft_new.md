@@ -1,5 +1,4 @@
 ---
-title: Rafa Chapter
 author:
 - 'Rafael Garcia-Meseguer'
 output:
