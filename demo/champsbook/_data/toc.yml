@@ -36,11 +36,11 @@
 - url: /05/paper_new
   title: Naik paper
   author: S. Naik 
-    
+
 - url: /test_page
   title: Writing LaTeX-like in Jupyter
   author: Broncio Aguilar-Sanjuan
-
+        
 - url: /contributing
   not_numbered: true
     

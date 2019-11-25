@@ -3,6 +3,7 @@
 
 
 * Created this logfile
+* Added instructions on how to adjust image dimensions in HTML for best fit
 * Added instructions on how to modify page appearance
 * Added script to automatically turn Markdown citation syntax to [`jekyll-scholar`](https://github.com/inukshuk/jekyll-scholar) syntax
 
