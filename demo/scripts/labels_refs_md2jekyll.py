@@ -1,13 +1,3 @@
-import re
-
-doc_infile = open("champsbook/content/03/Draft_new.md",'r')
-doc_lines = doc_infile.readlines()
-
-marker = 'fig'
-strings_for_removal = ').,;:'
-
-labels_pattern = re.compile('#'+marker+'(.+?)\s')
-refs_pattern = re.compile('@'+marker+'(.+?)\s')
 
 def minimal_ordered_set(seq):
     seen = set()
@@ -35,8 +25,6 @@ def get_labels_tags_dic(labels_pattern, doc_lines):
         return labels_tags_dic
     else:
         print("There are repeated labels in your file. This will lead to errors")
-
-labels_tags_dic = get_labels_tags_dic(labels_pattern, doc_lines)
 
 def replace_ref_syntax(refs_matched_raw, line):
     refs_tags = [s.translate({ord(i): None for i in strings_for_removal}) for s in refs_matched_raw]
@@ -66,50 +54,59 @@ def replace_label_syntax(labels_matched_raw, line):
     
     return line_modified
 
-def markdown_to_jekyll_labels_refs_V1(md_infile, md_outfile):
-    #############################################
-    # Extract all lines from input MD file
-    #############################################
-    try:
-        doc_infile = open(md_infile, 'r')
-        doc_lines = doc_infile.readlines()
+def markdown_to_jekyll_labels_refs_V1(doc_lines, md_outfile):
+    with open(md_outfile,'w') as doc_outfile:
+        for line in doc_lines:
+            refs_matched_raw = re.findall(refs_pattern,line)
+            labels_matched_raw = re.findall(labels_pattern, line)
 
-        with open(md_outfile,'w') as doc_outfile:
-            for line in doc_lines:
-                refs_matched_raw = re.findall(refs_pattern,line)
-                labels_matched_raw = re.findall(labels_pattern, line)
+            if refs_matched_raw and not labels_matched_raw:
+                line_modified = replace_ref_syntax(refs_matched_raw, line)
+                doc_outfile.write(line_modified)
 
-                if refs_matched_raw and not labels_matched_raw:
-                    line_modified = replace_ref_syntax(refs_matched_raw, line)
-                    doc_outfile.write(line_modified)
+            elif labels_matched_raw and not refs_matched_raw:
+                line_modified = replace_label_syntax(labels_matched_raw, line)
+                doc_outfile.write(line_modified)
 
-                elif labels_matched_raw and not refs_matched_raw:
-                    line_modified = replace_label_syntax(labels_matched_raw, line)
-                    doc_outfile.write(line_modified)
+            elif labels_matched_raw and refs_matched_raw:
+                line_modified = replace_label_syntax(labels_matched_raw, line)
+                line_modified = replace_ref_syntax(refs_matched_raw, line_modified)
+                doc_outfile.write(line_modified)
 
-                elif labels_matched_raw and refs_matched_raw:
-                    line_modified = replace_label_syntax(labels_matched_raw, line)
-                    line_modified = replace_ref_syntax(refs_matched_raw, line_modified)
-                    doc_outfile.write(line_modified)
-
-                else:
-                    line_modified = line
-                    doc_outfile.write(line_modified)
-            doc_outfile.close()
-            doc_infile.close()
+            else:
+                line_modified = line
+                doc_outfile.write(line_modified)
         
-    except:
-        print("Couldn't find Markdown file. Check your input path")
+    doc_outfile.close()
+    print("New Markdown file successfully generated!")
+        
         
 if __name__ == "__main__":
-    import sys
     import re
+    import sys
+    #############################################
+    # Settings
+    #############################################
+    marker = 'fig'
+    strings_for_removal = ').,;:'
+
+    labels_pattern = re.compile('#'+marker+'(.+?)\s')
+    refs_pattern = re.compile('@'+marker+'(.+?)\s')
     #############################################
     # Script input arguments (self-explanatory)
     #############################################
     md_infile = sys.argv[1]
     md_outfile = sys.argv[2]
     #############################################
-    # Turn MD file into jekyll-syntax modified file
+    # Extract all lines from input MD file
     #############################################
-    markdown_to_jekyll_labels_refs_V1(md_infile, md_outfile)
+    try:
+        doc_infile = open(md_infile, 'r')
+        doc_lines = doc_infile.readlines()
+        #############################################
+        # Turn MD file into jekyll-syntax modified file
+        #############################################
+        labels_tags_dic = get_labels_tags_dic(labels_pattern, doc_lines)
+        markdown_to_jekyll_labels_refs_V1(doc_lines, md_outfile)
+    except:
+        print("Couldn't find Markdown file. Check your input path")
