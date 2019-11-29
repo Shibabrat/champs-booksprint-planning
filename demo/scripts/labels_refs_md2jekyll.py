@@ -103,6 +103,7 @@ if __name__ == "__main__":
     try:
         doc_infile = open(md_infile, 'r')
         doc_lines = doc_infile.readlines()
+        doc_infile.close()
         #############################################
         # Turn MD file into jekyll-syntax modified file
         #############################################
