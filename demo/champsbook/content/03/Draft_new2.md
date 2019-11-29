@@ -22,6 +22,7 @@ Our model potential (see [fig:1](#ModelFig)) consists of a one-dimensional doubl
 
 ![Schematic representation (left) and definitions (right) of the model system used in our study.](SB_model.png)
 <a id="ModelFig"></a>
+<figcaption style="text-align:center;color:#808080"><span style="color:blue">fig:1</span> <em> Schematic representation (left) and definitions (right) of the model system used in our study.</em></figcaption>
 
 The Hamiltonian that describes the system is as follows:
 
@@ -101,3 +102,7 @@ The brighter colored bands visible on the reactant sides ($p_\perp <0$) in Figur
 ## References
 
 {% bibliography --file myBib --cited %}
+
+```python
+
+```
