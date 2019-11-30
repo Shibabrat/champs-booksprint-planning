@@ -6,11 +6,11 @@ title: |-
 author: Rafael Garcia-Meseguer
 pagenum: 2
 prev_page:
-  url: /02/booksprinttest_makrina_new.html
+  url: /02/booksprinttest_makrina_new2.html
 next_page:
   url: /04/test.html
 suffix: .md
-search: r p font ds fig v color red system potential space po point product points xi yi transit times well c where energy surface e trajectories dsclosefig line bath x frac mu pods dividing configuration px projection reactive j reactant minimum saddle circles approximate perp our model oscillator between representation png id h momenta reduced mass pes phase periodic max py parameter family increases coordinate blue transitfig modelfig dimensional represents only oscillators schematic left right hamiltonian mathbf eq pesfig full curve along equation structure momentum top masses dss case bottom different reaction choice reach brighter colors figure short introduction systems
+search: r p font ds fig v red color system potential space po point product points xi yi transit times well c where energy surface e trajectories dsclosefig line bath x frac mu pods dividing configuration px projection reactive j reactant minimum saddle circles approximate perp our model oscillator between representation png id h momenta reduced mass pes phase periodic max py parameter family increases coordinate blue transitfig modelfig dimensional represents only oscillators schematic left right hamiltonian mathbf eq pesfig full curve along equation structure momentum top masses dss case bottom different reaction choice reach brighter colors figure short introduction systems
 author:
 - 'Rafael Garcia-Meseguer'
 output:
@@ -37,7 +37,8 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <h3 id="Equations-for-the-system">Equations for the system<a class="anchor-link" href="#Equations-for-the-system"> </a></h3><p>Our model potential (see <a href="#ModelFig">fig:1</a>) consists of a one-dimensional double well oscillator that represents the reactive system, coupled to a one-dimensional harmonic oscillator representing the bath. The only coupling between the two oscillators is a Lennard-Jones-like repulsion potential term. Consequently, this model is appropriate only for nonpolar systems; our concern here is the consequence of non-bonded interactions between solvent and solute, not the more commonly studied polar interactions.</p>
 <p><img src="SB_model.png" alt="Schematic representation (left) and definitions (right) of the model system used in our study.">
 <a id="ModelFig"></a></p>
-<figcaption style="text-align:center;color:#808080"><span style="color:blue">fig:1</span> <em> Schematic representation (left) and definitions (right) of the model system used in our study.</em></figcaption><p>The Hamiltonian that describes the system is as follows:</p>
+<p><figcaption style="text-align:center;font-size:85%"><b>fig:1</b><em> Schematic representation (left) and definitions (right) of the model system used in our study.</em></figcaption><hr></p>
+<p>The Hamiltonian that describes the system is as follows:</p>
 $$ H(\mathbf{x})=H(\mathbf{r},\mathbf{p})=\frac{p_1^2}{2\mu_1}+\frac{p_2^2}{2\mu_2}+\sum_{j=1}^{5} c_j r_1^{j-1}+c_6 (c_7-r_2 )^2+\frac{c_8}{(r_2-r_1 )^{12}} $$<p>{#eq:modelEq}</p>
 <p>where the subscripts 1 and 2 refer to the reactive system and bath oscillators respectively; $r=(r_1,r_2 )$ is the position of the two oscillators and $p=(p_1,p_2 )$ represents the conjugate momenta. The reduced mass of each oscillator is represented by $\mu$, and c are coefficients whose values are listed in <a href="#ModelFig">fig:1</a>. The potential energy can be divided between $\sum_{j=1}^{5} c_j r_1^{j-1}$ as the potential of the reactive system, $V_2=c_6 (c_7-r_2 )^2$ as the potential of the bath and $V_{int}=c_8⁄(r_2-r_1 )^{-12}$ as the interaction between the two; hence $V=V_1+V_1+V_{int}$. The potential of the reactant, shown in <a href="#PESFig">fig:2</a>, is chosen to have a minimum at $r_1=1.0$ and a second one at $r_1=2.0$ , with respective potential energies $V_1=0.0$ and $V_1=-10$. The maximum energy is at $r_1=1.33867$ and $V_1=2.0$. The full potential, shown in <a href="#PESFig">fig:2</a>, has a saddle point at $r_1=1.36561$ and $r_2=2.161769$ at $V=3.47291$. The "reactant" minimum occurs at $r_1 = 0.98779$, $r_2 = 1.80661$, $V = 0.77040$. The "product" minimum occurs at $r_1 = 1.98517$, $r_2 = 2.75642$, $V = -6.66284$.</p>
 <p><img src="PES.png" alt="(Left)Reactive system&#39;s potential energy profile. (Right) Contours of the full potential energy surface. The contours are depicted in the $-7 \leq V \leq 6$ interval.">
