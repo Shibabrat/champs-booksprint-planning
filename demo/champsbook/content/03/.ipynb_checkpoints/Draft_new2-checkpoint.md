@@ -22,7 +22,6 @@ Our model potential (see [fig:1](#ModelFig)) consists of a one-dimensional doubl
 
 ![Schematic representation (left) and definitions (right) of the model system used in our study.](SB_model.png)
 <a id="ModelFig"></a>
-<figcaption style="text-align:center;font-size:85%"><b>fig:1</b><em> Schematic representation (left) and definitions (right) of the model system used in our study.</em></figcaption><hr>
 
 The Hamiltonian that describes the system is as follows:
 
