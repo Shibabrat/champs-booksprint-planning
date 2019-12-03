@@ -102,10 +102,10 @@ The parameters in the model are $m_A, m_B$ which represent mass of the isomers, 
 
 ## Visualization: Unstable periodic orbits 
 
-![Comparing the TP, TPCD, DCNC methods for the coupled quartic Hamiltonian. \label{fig:allinone_coupled}](allinone_coupled.pdf)
+![Comparing the TP, TPCD, DCNC methods for the coupled quartic Hamiltonian.](allinone_coupled.jpg){#fig:allinone_coupled  width=100%}
 
 
-![Comparing the TPCD method for the three Hamiltonians \label{fig:allinone_newmethod}](allinone_tpcd.pdf)
+![Comparing the TPCD method for the three Hamiltonians.](allinone_tpcd.jpg){#fig:allinone_newmethod width=100%}
 
 
 ## Relation to ongoing research projects

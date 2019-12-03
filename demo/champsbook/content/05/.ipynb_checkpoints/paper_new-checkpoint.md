@@ -1,4 +1,5 @@
 ---
+title: "UPOsHam: A Python package for computing unstable periodic orbits in two degrees of freedom Hamiltonian systems"
 authors:
 - affiliation: 1
   name: Wenyang Lyu
@@ -53,7 +54,7 @@ This method is based on finding the UPO by detecting trajectories initialized on
 
 __Turning point based on configuration difference  (TPCD)__
 
-Based on the turning point approach, we have implemented a __new method__ which shows stable convergence and does not rely on the dot product formula. Suppose we have found two initial conditions on a given equipotential contour and they turn in the opposite directions. If the difference in $x$-coordinates is small ($\approx 10^{-2} $), the generated trajectories will approach the UPO from either sides. If the difference in $x$-coordinates is large, we can integrate the Hamilton's equations for a guess time interval and find the turning point (event using ODE event detection) at which the trajectories bounce back from the far side of the equipotential contour in opposite directions. We choose these two points as our initial guess and the difference of $x$-coordinates become small now. Without loss of generality, this method can be modified to either pick the difference of $y$-coordinates or a combination of $x$ and $y$ coordinates. This choice will depend on the orientation of the potential energy surface's bottleneck in the configuration space.
+Based on the turning point approach, we have implemented a __new method__ which shows stable convergence and does not rely on the dot product formula. Suppose we have found two initial conditions on a given equipotential contour and they turn in the opposite directions. If the difference in $x$-coordinates is small ($\approx 10^{-2}$), the generated trajectories will approach the UPO from either sides. If the difference in $x$-coordinates is large, we can integrate the Hamilton's equations for a guess time interval and find the turning point (event using ODE event detection) at which the trajectories bounce back from the far side of the equipotential contour in opposite directions. We choose these two points as our initial guess and the difference of $x$-coordinates become small now. Without loss of generality, this method can be modified to either pick the difference of $y$-coordinates or a combination of $x$ and $y$ coordinates. This choice will depend on the orientation of the potential energy surface's bottleneck in the configuration space.
 
 __Differential correction and numerical continuation (DCNC)__
 
@@ -101,10 +102,10 @@ The parameters in the model are $m_A, m_B$ which represent mass of the isomers, 
 
 ## Visualization: Unstable periodic orbits 
 
-![Comparing the TP, TPCD, DCNC methods for the coupled quartic Hamiltonian. \label{fig:allinone_coupled}](allinone_coupled.pdf)
+![Comparing the TP, TPCD, DCNC methods for the coupled quartic Hamiltonian.](allinone_coupled.jpg){#fig:allinone_coupled  width=100%}
 
 
-![Comparing the TPCD method for the three Hamiltonians \label{fig:allinone_newmethod}](allinone_tpcd.pdf)
+![Comparing the TPCD method for the three Hamiltonians.](allinone_tpcd.jpg){#fig:allinone_newmethod width=100%}
 
 
 ## Relation to ongoing research projects

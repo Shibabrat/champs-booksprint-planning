@@ -101,7 +101,3 @@ The brighter colored bands visible on the reactant sides ($p_\perp <0$) in Figur
 ## References
 
 {% bibliography --file myBib --cited %}
-
-```python
-
-```
