@@ -41,7 +41,7 @@ if __name__ == "__main__":
     #############################################
     # Settings
     #############################################
-    captions_pattern = re.compile(r'\\caption\{(.+?)\}')
+    captions_pattern = re.compile(r'\\caption\{(.+?)\}$')
     #############################################
     # Script input arguments (self-explanatory)
     #############################################
