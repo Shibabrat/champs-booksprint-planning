@@ -3,8 +3,7 @@ def replace_caption_syntax(captions_matched_raw, item):
     caption = captions_matched_raw[0]
     html_syntax_items = (
         '<figcaption style="text-align:center;font-size:14px">',
-        '<b>latex_marker:latex_label </b>',
-        '<em>'+' ',
+        '<em>',
         caption,
         '</em>',
         '</figcaption>'

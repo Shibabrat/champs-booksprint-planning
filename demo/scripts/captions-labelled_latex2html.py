@@ -1,4 +1,3 @@
-
 def minimal_ordered_set(seq):
     seen = set()
     seen_add = seen.add
@@ -29,54 +28,43 @@ def get_labels_tags_dic(labels_pattern, nb):
     else:
         print("There are repeated labels in your file. This will lead to errors")
 
-def replace_ref_syntax(refs_matched_raw, item):
-    refs_tags = [s.translate({ord(i): None for i in strings_for_removal}) for s in refs_matched_raw]
-    refs_tags = list(set(refs_tags))
+def replace_caption_syntax(captions_matched_raw, cell_number, item):
+    caption = captions_matched_raw[0]
+    cell_content = nb['cells'][cell_number]['source']
+    labels_matched_raw = [x for x in cell_content if re.search(labels_pattern_html, x)]
     #############################################
-    # Replace Markdown reference syntax
+    # Here the label pattern can be modified either as LaTeX or HTML
     #############################################
-    x = refs_tags[0]
-    chunk_original = r'\ref{'+marker+':'+x+'}'
-    x_number = labels_tags_dic[x]
-    chunk_new = '['+marker+':'+x_number+'](#'+x+')'
-    item_modified = item.replace(chunk_original, chunk_new)
-    return item_modified
-    
-def replace_label_syntax(labels_matched_raw, item):
-    labels_tags = [s.translate({ord(i): None for i in strings_for_removal}) for s in labels_matched_raw]
-    labels_tags = list(set(labels_tags))
+    labels_tags_dic = get_labels_tags_dic(labels_pattern_html, nb)
+    label = re.findall(labels_pattern_html, labels_matched_raw[0])
     #############################################
-    # Replace Markdown reference syntax
-    #############################################
-    x = labels_tags[0]
-    chunk_original = r'\label{'+marker+':'+x+'}'
-    chunk_new = '\n<a id="'+x+'"></a>'
+    html_syntax_items = (
+        '<figcaption style="text-align:center;font-size:14px">',
+        '<b>',
+        marker+':'+labels_tags_dic[label[0]]+' ',
+        '</b>',
+        '<em>'+' ',
+        caption,
+        '</em>',
+        '</figcaption>'
+    )
+    chunk_new = ''.join(html_syntax_items)
+    chunk_original = r'\caption{'+caption+'}'
     item_modified = item.replace(chunk_original, chunk_new)
     return item_modified
 
-def latex_to_jekyll_labels_refs(nb_infile, nb_outfile):
-    #############################################
-    # Search for LaTeX label/ref commands within cells' content (source)
-    #############################################
+def latex_to_html_captions(nb, nb_outfile):
     for i in range(len(nb['cells'])):
         cell = nb['cells'][i]
         for j in range(len(cell['source'])):
             item = cell['source'][j]
-            refs_matched_raw = re.findall(refs_pattern,item)
-            labels_matched_raw = re.findall(labels_pattern, item)
-            #############################################
-            # Modify cell content with new syntax accordingly
-            #############################################
-            if refs_matched_raw and not labels_matched_raw:
-                item_modified = replace_ref_syntax(refs_matched_raw, item)
+
+            captions_matched_raw = re.findall(captions_pattern,item)
+            if captions_matched_raw:
+                cell_number = i
+                item_modified = replace_caption_syntax(captions_matched_raw, cell_number, item)
                 nb['cells'][i]['source'][j] = item_modified
 
-            elif labels_matched_raw and not refs_matched_raw:
-                item_modified = replace_label_syntax(labels_matched_raw, item)
-                nb['cells'][i]['source'][j] = item_modified
-
-            else:
-                pass
     #############################################
     # Modify cell content with new syntax accordingly
     #############################################
@@ -84,6 +72,7 @@ def latex_to_jekyll_labels_refs(nb_infile, nb_outfile):
         json.dump(nb, fp)
     fp.close()
     print("New Notebook successfully generated")
+    
 
 if __name__ == "__main__":
     import re
@@ -94,13 +83,13 @@ if __name__ == "__main__":
     #############################################
     marker = 'fig'
     strings_for_removal = ').,;:'
-
-    labels_pattern = re.compile(r'\\label\{'+marker+'(.+?)\}')
-    refs_pattern = re.compile(r'\\ref\{'+marker+'(.+?)\}')
+#     labels_pattern_latex = re.compile(r'\\label\{'+marker+'(.+?)\}')
+    labels_pattern_html = re.compile(r'<a id=(.+?)></a>')
+    captions_pattern = re.compile(r'\\caption\{(.+?)\}$')
     #############################################
-    # Script input arguments 
+    # Script input arguments (self-explanatory)
     #############################################
-    nb_infile = sys.argv[1] 
+    nb_infile = sys.argv[1]
     nb_outfile = sys.argv[2]
     #############################################
     # Load Jupyter Notebook as Dictionary
@@ -112,7 +101,6 @@ if __name__ == "__main__":
         #############################################
         # Turn LaTeX label/ref syntax in Jupyter Noteboks into MD syntax
         #############################################
-        labels_tags_dic = get_labels_tags_dic(labels_pattern, nb)
-        latex_to_jekyll_labels_refs(nb_infile, nb_outfile)
+        latex_to_html_captions(nb, nb_outfile)
     except:
         print("Couldn't find Jupyter Notebook. Check your input path")
