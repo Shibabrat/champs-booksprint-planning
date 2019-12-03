@@ -92,7 +92,7 @@ if __name__ == "__main__":
     #############################################
     # Settings
     #############################################
-    marker = 'fig'
+    marker = 'tab'
     strings_for_removal = ').,;:'
 
     labels_pattern = re.compile(r'\\label\{'+marker+'(.+?)\}')
