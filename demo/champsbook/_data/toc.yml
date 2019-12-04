@@ -21,11 +21,11 @@
   title: Dynamical Systems Concepts
   author: Stephen Wiggins  
     
-- url: /02/booksprinttest_makrina_html-captions
-  title: Makrina chapter
+- url: /02/booksprinttest_makrina_new3
+  title: Exploring Isomerization Dynamics on a four well Potential
   author: Makrina Agaoglou
     
-- url: /03/Draft_captions-html
+- url: /03/Draft_new3
   title: Rafa chapter
   author: Rafael Garcia-Meseguer
 
@@ -33,8 +33,8 @@
   title: Vladi chapter
   author: Vladimir Krajnak
 
-- url: /05/paper_new
-  title: Naik paper
+- url: /05/quad-normal-form/quad-normal-form_new3
+  title: Finding NHIM using LD N DoF quadratic normal form Hamiltonian
   author: S. Naik 
 
 - url: /06/caldera-1_new3
