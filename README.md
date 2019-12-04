@@ -13,15 +13,16 @@
 
 Repo created to store example and test notebooks for book building using [`jupyter-book`](https://github.com/jupyter/jupyter-book) 
  
-**Stuff Done**
+**STUFF DONE**
 
-* Fix programmatically syntax  for 
-* Inline citations and reference list
-* Figure labels/references
-* Figure captions
-* In MD files (MD syntax to HTML/Jekyll) and JNB files (LaTeX to HTML/Jekyll)
+* Fixed programmatically syntax  for 
+  * Inline citations and reference list
+  * Figure labels/references
+  * Figure captions
 
-**Stuff Remaining**
+In MD files (MD syntax to HTML/Jekyll) and JNB files (LaTeX to HTML/Jekyll)
+
+**STUFF REMAINING**
 
 * Need to extend previous scripts
 * Fix figure numbering for MD files
@@ -37,7 +38,7 @@ Facilities: Catering and Screens/keybords for comfort
 
 
 
-**Things to-do for writers**
+**TO-DO's FOR WRITERS**
 
 * MD files: remove \today
 * Convert all pdf figures to png (if possible)
@@ -47,7 +48,7 @@ Facilities: Catering and Screens/keybords for comfort
 * When labeling and referencing figures, tables, or sections. Use standard Latex markers (fig, tab, sec, subsec)
 * Maybe simplify notation for equations?
 
-**Homework** (4 Dec)
+**HOMEWORK** (4 Dec)
 
 * Create a github account (for organisation)
 * Make suggestiosn about the order of your own files
