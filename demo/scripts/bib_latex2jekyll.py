@@ -47,10 +47,7 @@ def latex_to_jekyll_bib(nb, nb_outfile):
     #############################################
     # Modify cell content with new syntax accordingly
     #############################################
-    with open(nb_outfile,'w') as fp:
-        json.dump(nb, fp)
-    fp.close()
-    print("New Notebook successfully generated")
+    return nb
     
 
 if __name__ == "__main__":
@@ -78,6 +75,10 @@ if __name__ == "__main__":
         #############################################
         # Turn LaTeX label/ref syntax in Jupyter Noteboks into MD syntax
         #############################################
-        latex_to_jekyll_bib(nb, nb_outfile)
+        nb_modified = latex_to_jekyll_bib(nb, nb_outfile)
+        with open(nb_outfile,'w') as fp:
+            json.dump(nb_modified, fp)
+            fp.close()
+            print("New Notebook successfully generated")
     except:
         print("Couldn't find Jupyter Notebook. Check your input path")
