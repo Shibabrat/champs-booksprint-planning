@@ -54,7 +54,7 @@ def replace_label_syntax(labels_matched_raw, item):
     item_modified = item.replace(chunk_original, chunk_new)
     return item_modified
 
-def latex_to_jekyll_labels_refs(nb_infile, nb_outfile):
+def latex_to_jekyll_labels_refs(nb):
     #############################################
     # Search for LaTeX label/ref commands within cells' content (source)
     #############################################
@@ -80,10 +80,7 @@ def latex_to_jekyll_labels_refs(nb_infile, nb_outfile):
     #############################################
     # Modify cell content with new syntax accordingly
     #############################################
-    with open(nb_outfile,'w') as fp:
-        json.dump(nb, fp)
-    fp.close()
-    print("New Notebook successfully generated")
+    return nb 
 
 if __name__ == "__main__":
     import re
@@ -113,6 +110,11 @@ if __name__ == "__main__":
         # Turn LaTeX label/ref syntax in Jupyter Noteboks into MD syntax
         #############################################
         labels_tags_dic = get_labels_tags_dic(labels_pattern, nb)
-        latex_to_jekyll_labels_refs(nb_infile, nb_outfile)
+        nb_modified = latex_to_jekyll_labels_refs(nb)
+        
+        with open(nb_outfile,'w') as fp:
+            json.dump(nb_modified, fp)
+        fp.close()
+    print("New Notebook successfully generated")
     except:
         print("Couldn't find Jupyter Notebook. Check your input path")

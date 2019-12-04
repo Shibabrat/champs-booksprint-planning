@@ -25,7 +25,7 @@ def replace_bibliography_syntax(bibliography_matched_raw, item):
     item_modified = item.replace(chunk_original, chunk_new)
     return item_modified
 
-def latex_to_jekyll_bib(nb, nb_outfile):
+def latex_to_jekyll_bib(nb):
     for i in range(len(nb['cells'])):
         cell = nb['cells'][i]
         for j in range(len(cell['source'])):
@@ -75,7 +75,8 @@ if __name__ == "__main__":
         #############################################
         # Turn LaTeX label/ref syntax in Jupyter Noteboks into MD syntax
         #############################################
-        nb_modified = latex_to_jekyll_bib(nb, nb_outfile)
+        nb_modified = latex_to_jekyll_bib(nb)
+        
         with open(nb_outfile,'w') as fp:
             json.dump(nb_modified, fp)
             fp.close()
