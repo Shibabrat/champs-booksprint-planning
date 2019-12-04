@@ -32,9 +32,10 @@ In MD files (MD syntax to HTML/Jekyll) and JNB files (LaTeX to HTML/Jekyll)
 https://jupyterbook.org/guide/publish/book-html.html
 
 _NOTES_
-Focus on the big picture (to get stuff done), details are secondary
-Publishing copyright issues - need to be cautios about (pre-submission to Arxiv)
-Facilities: Catering and Screens/keybords for comfort
+
+* Focus on the big picture (to get stuff done), details are secondary
+* Publishing copyright issues - need to be cautios about (pre-submission to Arxiv)
+* Facilities: Catering and Screens/keybords for comfort
 
 
 
