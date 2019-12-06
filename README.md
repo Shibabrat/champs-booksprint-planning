@@ -7,11 +7,10 @@
     <img src="demo/champsbook/content/images/logo/uob-logo.png" width="15%" align="right">
 </a>
 
-
-Collection of meeting notes, templates, and tests
-=================================================
-
 # CHAMPS Book-Sprint Planning
+
+## Collection of meeting notes, templates, and tests
+
 
 Repo created to store example and test notebooks for book building using [`jupyter-book`](https://github.com/jupyter/jupyter-book) 
  
