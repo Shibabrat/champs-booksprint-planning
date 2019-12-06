@@ -1,0 +1,54 @@
+# This file contains the order and numbering for all sections in the book.
+#
+# Each entry has the following schema:
+#
+# - title: mytitle   # Title of chapter or section
+#   url: /myurl  # URL of section relative to the /content/ folder.
+#   sections:  # Contains a list of more entries that make up the chapter's sections
+#   not_numbered: true  # if the section shouldn't have a number in the sidebar
+#     (e.g. Introduction or appendices)
+#   expand_sections: true  # if you'd like the sections of this chapter to always
+#     be expanded in the sidebar.
+#   external: true  # Whether the URL is an external link or points to content in the book
+#
+# Below are some special values that trigger specific behavior:
+# - search: true  # Will provide a link to a search page
+# - divider: true  # Will insert a divider in the sidebar
+# - header: My Header  # Will insert a header with no link in the sidebar
+
+
+- url: /01/ham_bif_html-captions
+  title: Dynamical Systems Concepts
+  author: Stephen Wiggins  
+    
+- url: /02/booksprinttest_makrina_new3
+  title: Exploring Isomerization Dynamics on a four well Potential
+  author: Makrina Agaoglou
+    
+- url: /03/Draft_new3
+  title: Rafa chapter
+  author: Rafael Garcia-Meseguer
+
+- url: /04/test
+  title: Vladi chapter
+  author: Vladimir Krajnak
+
+- url: /05/quad-normal-form/quad-normal-form_new3
+  title: Finding NHIM using LD N DoF quadratic normal form Hamiltonian
+  author: S. Naik 
+
+- url: /06/caldera-1_new3
+  title: Dynamical Matching in a Caldera Potential energy surface
+  author: Matthaios Katsanikas
+
+- url: /test_page
+  title: Writing LaTeX-like in Jupyter
+  author: Broncio Aguilar-Sanjuan
+        
+- url: /contributing
+  not_numbered: true
+    
+- url: https://github.com/broncio123/champs-booksprint-planning
+  title: GitHub repository
+  external: true
+  not_numbered: true
